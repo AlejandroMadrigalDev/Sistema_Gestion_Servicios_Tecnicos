@@ -40,25 +40,76 @@ Modulos Generales:
 		2. Extendido
 	3. Individuales por Caso de uso.
 __________________________________________________________________________________
+_______________________________________________________________________________
 CONSTRUCCION DE MODULOS:
+Create. Registrar.
+Read.   Consultar.
+Update. Actualizar.
+Delete. Eliminar.
+GetID.  ObtenerID.
 
-GESTION DE USUARIOS: 
-	1. INGRESO Y VERIFICACION DE ROL (Admin)
-		Espec: Creacion de rol.
-	2. CREACION DE PERFILES PARA LOS TECNICOS (Admin)
-	3. GESTION DE TECNICOS (Admin)
-		4. ADMINISTRACION DE INFORMACION DE LOS TECNICOS (Admin)
-	5. GESTION DE CLIENTES (Admin)
-		6. ADMINISTRACION DE LA INFORMACION DE LOS CLIENTES (Admin)
-	19. INGRESO Y AUTENTICACION (Tecnico)
-	30. REGISTRO (Cliente)
-		31. VERIFICACION Y ACEPTACION DE TERMINOS Y CONDICIONES (Cliente)
-	32. INGRESO Y AUTENTICACION (Cliente)
+	(CREATE) -------------------------------ADMIN
+	(READ)   -------------------------------ADMIN
+	(UPDATE) -------------------------------ADMIN
+	(DELETE) -------------------------------ADMIN
+	(ID)     -------------------------------ADMIN
 
+_______________________________________________________________________________
+_______________________________________________________________________________
+MODULO USUARIOS:
+
+GESTION ROLES
+	(CREATE) REGISTRAR ROLES:               ADMIN
+	(READ)   CONSULTAR ROLES:               ADMIN
+	(UPDATE) ACTUALIZAR ROLES:              ADMIN
+	(DELETE) ELIMINAR ROLES:                ADMIN
+	(ID)     OBTENER ROL POR ID:            INCLUDE
+
+AUTOGESTION USUARIOS
+	(CREATE) AUTO REGISTRO:                 ADMIN - TECNICO - CLIENTE
+	(READ)   AUTO CONSULTAR:                ADMIN - TECNICO - CLIENTE
+	(UPDATE) AUTO ACTUALIZAR:               ADMIN - TECNICO - CLIENTE
+	(DELETE) AUTO ELIMINAR:                 ADMIN - TECNICO - CLIENTE
+	(ID)     OBTENER ROL POR ID:            INCLUDE
+
+GESTION USUARIOS
+	(CREATE) CREAR PERFIL (CUALQUIER):      ADMIN
+	(READ)   CONSULTAR PERFIL TECNICO:      ADMIN - CLIENTE
+		 (ADMIN VISTA COMPLETA - CLIENTE VISTA LIMITADA)
+		 CONSULTAR PERFIL CLIENTE:       ADMIN - TECNICO
+		 (ADMIN VISTA COMPLETA - TECNICO VISTA LIMITADA)
+	(UPDATE) ACTUALIZAR USUARIOS:           ADMIN
+	(DELETE) ELIMINAR USUARIOS:             ADMIN
+	(ID)     OBTENER USUARIO POR ID:        INCLUDE
+
+INGRESO
+	(READ)   INICIO DE SESION:              ADMIN - TECNICO - CLIENTE
+		(VISTAS DIFERENTES DEPENDIENDO DEL ROL)
+	(UPDATE) CERRAR SESION:                 ADMIN - TECNICO - CLIENTE
+
+__________________________________________________________________________________
+CU------2. CREACION DE PERFILES PARA LOS TECNICOS (Admin)                                ---AD - TC
+CUAD----	CU: Creacion de usuarios admin                                           ---AD
+EXTENDAD	EX: Codigo de seguridad para crear perfiles de Admin y Tecnico           ---AD
+	También podemos generar un auto registro como cliente y que tenga la 
+		opción de actualizarse?
+CU------30. REGISTRO (Cliente)                                                           ---AD - TC - CL
+EXTEND		31. VERIFICACION Y ACEPTACION DE TERMINOS Y CONDICIONES (Cliente)        ---AD - TC - CL
+EXTENDAD	EX: CRUD TERMINOS Y CONDICIONES                                          ---AD
+CU------1. INGRESO Y VERIFICACION DE ROL (Admin)                                         ---AD - TC - CL
+CUAD----	Espec: Creacion de rol.                                                  ---AD
+CU------19. INGRESO Y AUTENTICACION (Tecnico)                                            ---AD - TC - CL
+CU------32. INGRESO Y AUTENTICACION (Cliente)                                            ---AD - TC - CL
+CU------3. GESTION DE TECNICOS (Admin)                                                   ---AD - TC
+CU------	4. ADMINISTRACION DE INFORMACION DE LOS TECNICOS (Admin)                 ---AD - TC
+CU------5. GESTION DE CLIENTES (Admin)                                                   ---AD - TC - CL
+CU------	6. ADMINISTRACION DE LA INFORMACION DE LOS CLIENTES (Admin)              ---AD - CL
+__________________________________________________________________________________
+__________________________________________________________________________________
 GESTION DE SERVICIOS: 
 	7. CREACION DE LOS TIPOS DE SERVICIOS DISPONIBLES (Admin)
 	8. PUBLICACION DE SERVICIOS DISPONIBLES Y MODULO DE SOLICITUD (Admin)
-	9. CONSULTA DE SERVICIOS DISPONIBLES Y SELECCION DE TIPO DE SERVICIO (Cliente)
+	33. CONSULTA DE SERVICIOS DISPONIBLES Y SELECCION DE TIPO DE SERVICIO (Cliente)
 
 GESTION DE SOLICITUDES: 
 	9. GESTION DE SOLICITUD DE SERVICIO (Admin)
@@ -100,7 +151,9 @@ SOPORTE AL CLIENTE:
 	24. COMUNICACION CON EL CLIENTE (Tecnico)
 	29. ENVIO DE REPORTE A ADMINISTRATIVO (Tecnico)
 	36. COMUNICACION CON EL TECNICO (Cliente)
-
+……………………………………………………………………………………………………………………………………………………..MODULOS ADICIONALES POR EVALUAR
 GESTION DE CALIDAD DEL SERVICIO:
 	46. VALORACION DEL TECNICO / SERVICIO (Cliente)
-_______________________________________________________________________________
+
+
+GESTION DE ELECTRODOMESTICOS?

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMovíl - Sistema de Gestion de Servicios Tecnicos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>    
+    <nav class="navbar">
+        <div class="navbar.container">
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="logo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a1 1 0 00-1.4-1.4l-1.6-1.6a1 1 0 00-1.4 0L14.7 6.3z M12.5 9.5L9 13l-2.5 2.5a6 6 0 008.5 8.5l2.5-2.5 3.5-3.5-4-4z" />
+                </svg>
+                <span class="title"><a href="index.html">ElectroMovíl</a></span>
+            </div>
+            <div class="menu">
+                <a href="catalogo.html">Servicios</a>
+                <a href="formulario.html">Solicitudes</a>
+                <a href="admin.html">Ingreso Admin</a>
+                <a href="login.html">Iniciar Sesión Cliente</a>
+                <a href="login.html">Cerrar Sesión</a>
+            </div>
+            <button class="mobile-menu-button" id="mobileMenuButton">
+                <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="catalogo.html">Servicios</a>
+                <a href="formulario.html">Solicitudes</a>
+                <a href="admin.html">Ingreso Admin</a>
+                <a href="login.html">Iniciar Sesión Cliente</a>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </nav>
+    <section id="request" class="request-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="header">
+                    <h2>Solicitud de Servicio</h2>
+                </div>
+                <form id="serviceRequestForm">
+                    <div class="grid">
+                        <div>
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div>
+                            <label for="phone">Numero</label>
+                            <input type="text" id="phone" required>
+                        </div>
+                        <div>
+                            <label for="address">Direccion</label>
+                            <input type="text" id="address">
+                        </div>
+                        <div>
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label for="service">Servicio Requerido</label>
+                        <select id="service" required>
+                            <option value="">Seleccione un servicio...</option>
+                            <option value="web-development">Instalación</option>
+                            <option value="graphic-design">Mantenimiento</option>
+                            <option value="digital-marketing">Reparación</option>
+                            <option value="seo">Consulta</option>
+                            <option value="consulting">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <!-- <div class="mt-6">
+                        <label for="budget">Presupuesto Estimado</label>
+                        <select id="budget">
+                            <option value="">Seleccione un rango...</option>
+                            <option value="50.000-100.000">$50.000 - $100.000</option>
+                            <option value="1000-2500">$1,000 - $2,500</option>
+                            <option value="2500-5000">$2,500 - $5,000</option>
+                            <option value="5000+">Más de $5,000</option>
+                        </select>
+                    </div>
+                    -->
+
+                    <div class="mt-6">
+                        <label for="details">Detalles del Electrodomestico</label>
+                        <textarea id="details" rows="5"></textarea>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" required>
+                            <span>Acepto los términos y condiciones</span>
+                        </label>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="proces.html"><button type="submit" class="btn-primary"><a href="proces.html">Enviar Solicitud</a></button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+</body>
