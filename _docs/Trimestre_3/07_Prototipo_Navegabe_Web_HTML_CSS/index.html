@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema de Servicios Profesionales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #2b6cb0;
+            --secondary-color: #1a202c;
+            --accent-color: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--secondary-color);
+        }
+        
+        .navbar {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2c5282;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .dashboard-card {
+            transition: all 0.3s ease;
+        }
+        
+        .dashboard-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .responsive-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    Whast Happen
+    <!-- Barra de navegación superior -->
+    <nav class="navbar py-4 px-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span class="text-xl font-bold text-white">ServiPro</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#services" class="text-white hover:text-blue-300 transition">Servicios</a>
+                <a href="#request" class="text-white hover:text-blue-300 transition">Solicitudes</a>
+                <a href="#admin" class="text-white hover:text-blue-300 transition">Admin</a>
+                <a href="#reports" class="text-white hover:text-blue-300 transition">Reportes</a>
+                <a href="#payments" class="text-white hover:text-blue-300 transition">Pagos</a>
+                <a href="#contact" class="text-white hover:text-blue-300 transition">Contacto</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none" id="mobileMenuButton">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <!-- Menú móvil -->
+        <div class="md:hidden hidden px-4 py-2 bg-gray-800" id="mobileMenu">
+            <a href="#services" class="block py-2 text-white hover:text-blue-300">Servicios</a>
+            <a href="#request" class="block py-2 text-white hover:text-blue-300">Solicitudes</a>
+            <a href="#admin" class="block py-2 text-white hover:text-blue-300">Admin</a>
+            <a href="#reports" class="block py-2 text-white hover:text-blue-300">Reportes</a>
+            <a href="#payments" class="block py-2 text-white hover:text-blue-300">Pagos</a>
+            <a href="#contact" class="block py-2 text-white hover:text-blue-300">Contacto</a>
+        </div>
+    </nav>
+
 </body>
 </html>
