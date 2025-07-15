@@ -86,7 +86,6 @@ INGRESO
 	(READ)   INICIO DE SESION:              ADMIN - TECNICO - CLIENTE
 		(VISTAS DIFERENTES DEPENDIENDO DEL ROL)
 	(UPDATE) CERRAR SESION:                 ADMIN - TECNICO - CLIENTE
-
 __________________________________________________________________________________
 CU------2. CREACION DE PERFILES PARA LOS TECNICOS (Admin)                                ---AD - TC
 CUAD----	CU: Creacion de usuarios admin                                           ---AD
@@ -151,7 +150,7 @@ SOPORTE AL CLIENTE:
 	24. COMUNICACION CON EL CLIENTE (Tecnico)
 	29. ENVIO DE REPORTE A ADMINISTRATIVO (Tecnico)
 	36. COMUNICACION CON EL TECNICO (Cliente)
-……………………………………………………………………………………………………………………………………………………..MODULOS ADICIONALES POR EVALUAR
+………………………………………………………………………………………………………………………………………………………MODULOS ADICIONALES POR EVALUAR
 GESTION DE CALIDAD DEL SERVICIO:
 	46. VALORACION DEL TECNICO / SERVICIO (Cliente)
 
@@ -159,3 +158,85 @@ GESTION DE CALIDAD DEL SERVICIO:
 GESTION DE ELECTRODOMESTICOS?
 
 GESTION DE REPORTES?
+__________________________________________________________________________________
+OK --- PASO ADICIONAL: EN EL CAMINO PODEMOS IR AGREGANDO NUEVOS CASOS DE USO SI LOS VEMOS PERTINENTES.
+OK --- PASO 1: CLASIFICAR EL CASO DE USO ANTERIOR A UNO DE LOS MODULOS IDENTIFICADOS.
+OK --- PASO 2: ESPECIFICAR EL ACTOR DE CADA CASO.
+PASO 3: DEFINIR QUE OTROS ACTORES COMPARTEN EL MISMO CASO DE USO.
+
+PASO 4: JUNTAR LOS CASOS DE USO QUE ESTEN RELACIONADOS ENTRE SI. ES DECIR, EL PASO 1
+PASO 5: DESGLOSAR LOS CASOS DE USO EN CRUD.ID.
+	LOS CASOS DE USO DE "GESTION" LOS PODEMOS USAR COMO RECUADROS QUE CONTENGAN LOS CRUD.ID
+
+Create.  Registrar.
+Read.     Consultar.
+Update.  Actualizar.
+Delete.   Eliminar.
+GetID.    ObtenerID.
+__________________________________________________________
+                       MODULOS
+1. Gestion de usuarios.
+2. Gestion de servicios.
+3. Gestion de solicitudes.
+4. Gestion de ordenes de trabajo.
+5. Gestion de pagos.
+6. Atencion al cliente.
+.......................................................posibles adiciones
+7. Gestion de calidad del servicio.
+    Reseñas, calificaciones, comentarios, etc.
+8. Gestion de reportes.
+    Reportes en general de toda la info y bases de datos en la pagina.
+_________________________________________________________
+ADMIN
+1. Ingreso y verificacion de rol
+2. Creacion de perfiles para los tecnicos
+3. Gestion de tecnicos
+    4. Administracion de informacion del tecnico
+5. Gestion de clientes
+    6. Administracino de informacion del cliente
+7. Creacion de tipos de servicios disponibles
+8. Publicacion de servicios disponibles y modulo de solicitud
+9. Gestion de solicitud de servicio
+    10. Evaluacion de solicitud de servicio
+        11. Confirmacion hora y fecha de visita
+12. Administracion de ordenes de trabajo
+    13. Creacion de orden de trabajo
+        14. Asignacion de orden de trabajo a un tecnico
+             15. Control de orden de trabajo
+16. Administracion y gestion de pago y medios de pago
+17. Envio de factura electronica
+18. Soporte al cliente
+
+TECNICO
+19. Ingreso y autenticacion
+20. Revision de ordenes de trabajo
+    21. Verificacion de formato de solicitud de servicio
+22. Seleccion de ordenes de trabajo
+    23. Reporte de ubicacion
+    24. Comunicacion con el cliente
+25. Gestion de ordenes de trabajo
+    26. Confirmacion de llegada a domicilio - Control de seguridad
+27. Control de estado del servicio
+    28. Generar cambios acerca del servicio
+29. Envio de reporte a administrativo
+
+CLIENTE
+30. Registro
+    31. Verificacion y aceptacion de terminos y condiciones
+32. Ingreso / Autenticacion
+33. Consulta de servicios disponibles y seleccion de tipo de servicio
+34. Diligenciamiento de formatio de solicitud de servicio
+    35. Envio de solicitud de servicio (Verificacion de estado)
+36. Comunicacion con el tecnico
+    37. Acordar hora y fecha de la visita
+38. Seguimiento del servicio
+    39. Verificar detalles del tecnico
+    40. Generar cambios acerca del servicio
+41. Control de procesos del servicio
+    42. Control de seguridad
+43. Generar pago
+    45. Confirmacino de pago / Envio de soporte
+44. Verificar faactura / Garantia 
+   46. Valoracion del tecnico / Valoracion del servicio
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
